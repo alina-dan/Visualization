@@ -4,13 +4,15 @@ import java.util.List;;
 
 public class AbstractSortingAlgorithm {
 
-    boolean isSorted(List<Integer> arr) {
-        for (int i = 0; i < arr.size() - 1; i++) {
-            if (arr.get(i) < arr.get(i + 1)) {
+    public static boolean isSorted(int[] arr) {
+        if (arr.length == 0 || arr.length == 1) {
+            return true;
+        }
+        for (int index = 0; index < arr.length - 1; index++) {
+            if (arr[index] > arr[index + 1]) {
                 return false;
             }
         }
         return true;
     }
-
 }
